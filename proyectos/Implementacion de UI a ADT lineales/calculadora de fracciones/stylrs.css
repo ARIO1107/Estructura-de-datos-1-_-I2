@@ -1,0 +1,35 @@
+body { 
+    font-family: monospace;
+    font-size: x-large;
+    margin: 0;
+    padding: 0;
+}
+input, select, button { 
+    margin: 5px; 
+    padding: 5px;
+    border-width: 1px; 
+    border-radius: 10px;
+    
+}
+.resultado { 
+    margin-top: 15px; 
+    font-weight: bold; 
+    text-align: center;
+}
+h1{
+    text-align: center;
+    padding: 50px;
+
+}
+.entradas{
+    text-align: center;
+}
+.Calcular{
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-family: monospace;
+    text-align: center;
+    font-size: x-large;
+}

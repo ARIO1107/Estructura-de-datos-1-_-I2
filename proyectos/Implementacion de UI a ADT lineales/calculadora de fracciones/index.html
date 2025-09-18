@@ -1,0 +1,30 @@
+<!--Vista-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de fracciones</title>
+    <link rel="stylesheet" href="stylrs.css">
+</head>
+<body>
+    <h1>Calculadora de fracciones (MVC)</h1>
+    <div class="entradas">
+        <input id="f1" placeholder="Ej: a/b">
+        <select id="op">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">×</option>
+            <option value="/">÷</option>
+        </select>
+        <input id="f2" placeholder="Ej: c/d">
+    </div >
+    <div class="Calcular">
+        <button onclick="calcular()"> Calcular </button>
+    </div>
+    <div class="resultado" id="res"></div>
+
+    <script src="model.js"></script>
+    <script src="controller.js"></script>
+</body>
+</html>
