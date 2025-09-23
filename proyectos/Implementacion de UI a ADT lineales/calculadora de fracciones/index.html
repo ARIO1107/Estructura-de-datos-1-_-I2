@@ -1,29 +1,64 @@
-<!--Vista-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de fracciones</title>
+    <title>Calculadora Estructuras (MVC)</title>
     <link rel="stylesheet" href="stylrs.css">
 </head>
 <body>
-    <h1>Calculadora de fracciones (MVC)</h1>
-    <div class="entradas">
-        <input id="f1" placeholder="Ej: a/b">
-        <select id="op">
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">×</option>
-            <option value="/">÷</option>
-        </select>
-        <input id="f2" placeholder="Ej: c/d">
-    </div >
-    <div class="Calcular">
-        <button onclick="calcular()"> Calcular </button>
-    </div>
-    <div class="resultado" id="res"></div>
+    <h1>Calculadora de Estructuras (MVC)</h1>
 
+<!-- ================== Fracciones ================== -->
+    <section>
+        <h2>Fracciones</h2>
+        <div class="entradas">
+            <input id="f1" placeholder="Ej: a/b">
+            <select id="opFrac">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <input id="f2" placeholder="Ej: c/d">
+        </div>
+    <button onclick="calcularFraccion()">Calcular</button>
+    <div class="resultado" id="resFrac"></div>
+    </section>
+
+<!-- ================== Conjuntos ================== -->
+    <section>
+        <h2>Conjuntos</h2>
+        <div class="entradas">
+            <input id="c1" placeholder="Ej: 1,2,3">
+            <select id="opConj">
+                <option value="union">Unión</option>
+                <option value="inter">Intersección</option>
+                <option value="dif">Diferencia</option>
+            </select>
+            <input id="c2" placeholder="Ej: 2,3,4">
+        </div>
+        <button onclick="calcularConjunto()">Calcular</button>
+        <div class="resultado" id="resConj"></div>
+    </section>
+
+<!-- ================== Polinomios ================== -->
+    <section>
+        <h2>Polinomios</h2>
+        <p><small>Escribe coeficientes separados por coma (Ej: 2,0,3 representa 2x² + 0x + 3)</small></p>
+        <div class="entradas">
+            <input id="p1" placeholder="Ej: 2,0,3">
+            <select id="opPol">
+                <option value="suma">Suma</option>
+                <option value="multi">Multiplicación</option>
+            </select>
+            <input id="p2" placeholder="Ej: 1,4">
+        </div>
+        <button onclick="calcularPolinomio()">Calcular</button>
+        <div class="resultado" id="resPol"></div>
+    </section>
+
+<!-- Scripts -->
     <script src="model.js"></script>
     <script src="controller.js"></script>
 </body>

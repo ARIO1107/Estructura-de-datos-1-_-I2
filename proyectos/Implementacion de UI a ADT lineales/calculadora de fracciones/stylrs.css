@@ -1,35 +1,35 @@
-body { 
+body {
     font-family: monospace;
-    font-size: x-large;
-    margin: 0;
-    padding: 0;
-}
-input, select, button { 
-    margin: 5px; 
-    padding: 5px;
-    border-width: 1px; 
-    border-radius: 10px;
-    
-}
-.resultado { 
-    margin-top: 15px; 
-    font-weight: bold; 
+    margin: 15px;
     text-align: center;
+    font-size: large;
 }
-h1{
-    text-align: center;
-    padding: 50px;
 
-}
-.entradas{
+h1 {
     text-align: center;
 }
-.Calcular{
-    margin: 30px;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    font-family: monospace;
-    text-align: center;
-    font-size: x-large;
+
+section {
+    margin: 20px 0;
+    padding: 15px;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+.entradas {
+    margin: 10px 0;
+}
+
+input, select, button {
+    margin: 5px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: 1px solid #333;
+}
+
+.resultado {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #4d4d4d;
+    
 }

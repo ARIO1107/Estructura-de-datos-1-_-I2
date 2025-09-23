@@ -1,27 +1,33 @@
-//Controlador
-function calcular() {
-    const f1Input = document.getElementById("f1").value;
-    const f2Input = document.getElementById("f2").value;
-    const op = document.getElementById("op").value;
-    const res = document.getElementById("res");
+// ======== Fracciones ========
+function calcularFraccion() {
+    let f1 = parseFrac(document.getElementById("f1").value);
+    let f2 = parseFrac(document.getElementById("f2").value);
+    let op = document.getElementById("opFrac").value;
+    let res = operarFracciones(f1, f2, op);
+    document.getElementById("resFrac").innerText = "Resultado: " + res;
+}
 
-    try {
-        const f1 = Fraction.fromString(f1Input);
-        const f2 = Fraction.fromString(f2Input);
+// ======== Conjuntos ========
+function calcularConjunto() {
+    let c1 = strToSet(document.getElementById("c1").value);
+    let c2 = strToSet(document.getElementById("c2").value);
+    let op = document.getElementById("opConj").value;
+    let res = operarConjuntos(c1, c2, op);
+    document.getElementById("resConj").innerText = "Resultado: {" + res + "}";
+}
 
-    let r;
-    switch(op) {
-        case "+": r = f1.add(f2); break;
-        case "-": r = f1.subtract(f2); break;
-        case "*": r = f1.multiply(f2); break;
-        case "/": r = f1.divide(f2); break;
+// ======== Polinomios ========
+function calcularPolinomio() {
+    let p1 = strToPoly(document.getElementById("p1").value);
+    let p2 = strToPoly(document.getElementById("p2").value);
+    let op = document.getElementById("opPol").value;
+    let res;
+
+    if (op === "suma") {
+        res = sumarPolinomios(p1, p2);
+    } else if (op === "multi") {
+        res = multiplicarPolinomios(p1, p2);
     }
 
-    res.innerHTML = `
-        <p><b>Resultado:</b> ${r.toString()}</p>
-        <p><b>Decimal:</b> ${r.toDecimal()}</p>
-    `;
-    } catch(e) {
-        res.innerHTML = `<p style="color:red;">Error: ${e.message}</p>`;
-    }
+    document.getElementById("resPol").innerText = "Resultado: " + polyToStr(res);
 }
