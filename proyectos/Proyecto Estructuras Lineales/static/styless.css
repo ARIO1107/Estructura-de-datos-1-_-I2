@@ -1,56 +1,95 @@
+/* Fondo y tipografía general */
 body {
-    font-family: monospace;
-    background: #f5f6fa;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-.container {
-    background: white;
+/* Contenedor principal */
+.app-container {
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    width: 90%;
+    max-width: 700px;
+    border-radius: 20px;
+    padding: 25px 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #00ffd5;
+}
+
+header p {
+    color: #ccc;
+}
+
+/* Formulario */
+.task-form .form-control,
+.task-form .form-select {
     border-radius: 10px;
-    padding: 25px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-    width: 400px;
 }
 
-h1, h2 {
-    text-align: center;
+.task-form .btn-success {
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-form {
+.task-form .btn-success:hover {
+    background-color: #00ff88;
+    color: #000;
+}
+
+/* Lista de tareas */
+.task-list .task-item {
     display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-input[type="text"] {
-    flex: 1;
-    padding: 8px;
-}
-
-button {
-    padding: 8px 12px;
-    background-color: #4CAF50;
-    color: white;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
     border: none;
-    border-radius: 6px;
-    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 12px 18px;
+    transition: transform 0.2s ease;
 }
 
-button:hover {
-    background-color: #45a049;
+.task-list .task-item:hover {
+    transform: scale(1.02);
+    background-color: rgba(255,255,255,0.15);
 }
 
-.btn-remove {
-    background-color: #e74c3c;
+/* Información de la tarea */
+.task-info h5 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #fff;
 }
 
-.btn-remove:hover {
-    background-color: #c0392b;
+.task-info small {
+    color: #ddd;
 }
 
-.vacio {
-    text-align: center;
-    color: #888;
+/* Botones de acciones */
+.task-actions a {
+    margin-left: 8px;
+    font-size: 0.85rem;
+}
+
+/* Tareas finalizadas */
+.finalizada h5 {
+    text-decoration: line-through;
+    opacity: 0.6;
 }
