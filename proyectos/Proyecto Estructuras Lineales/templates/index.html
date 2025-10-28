@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor de Tareas con Cola</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🧾 Gestor de Tareas</h1>
+
+        <form action="/agregar" method="POST">
+            <input type="text" name="tarea" placeholder="Nueva tarea..." required>
+            <button type="submit">Agregar</button>
+        </form>
+
+        <form action="/quitar" method="POST">
+            <button type="submit" class="btn-remove">Quitar primera tarea</button>
+        </form>
+
+        <h2>Tareas en cola:</h2>
+        <ul>
+            {% for tarea in tareas %}
+                <li>{{ tarea }}</li>
+            {% else %}
+                <li class="vacio">No hay tareas</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

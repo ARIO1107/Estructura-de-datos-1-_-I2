@@ -1,0 +1,56 @@
+body {
+    font-family: monospace;
+    background: #f5f6fa;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.container {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    width: 400px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 8px;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.btn-remove {
+    background-color: #e74c3c;
+}
+
+.btn-remove:hover {
+    background-color: #c0392b;
+}
+
+.vacio {
+    text-align: center;
+    color: #888;
+}
