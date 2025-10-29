@@ -18,7 +18,7 @@ def index():
 def agregar():
     nombre = request.form['nombre']
     importancia = request.form['importancia']
-    detalle = request.form.get('detalle', '').strip()  # 👈 si no hay detalle, será cadena vacía
+    detalle = request.form.get('detalle', '').strip()  #  si no hay detalle, será cadena vacía
     
     if nombre:
         tarea = Tarea(nombre, importancia, detalle)
