@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Circular de Figuras</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styless.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista Circular de Figuras</h1>
+
+        <!-- Contenedor de figura -->
+        <div class="figura {{ figura }} {{ color }}">{{ figura }}</div>
+
+        <div class="controles">
+            <a href="/retroceder" class="btn">⬅️</a>
+            <a href="/avanzar" class="btn">➡️</a>
+        </div>
+    </div>
+</body>
+</html>

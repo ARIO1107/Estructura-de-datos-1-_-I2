@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.figura {
+    width: 150px;
+    height: 150px;
+    margin: 30px auto;
+    transition: all 0.5s ease;
+}
+
+/* Formas */
+.circulo {
+    border-radius: 50%;
+}
+
+.cuadrado {
+    border-radius: 0%;
+}
+
+.triangulo {
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 150px solid red; /* se sobrescribirá con la clase color */
+    background: none;
+}
+
+/* Colores para círculo y cuadrado */
+.rojo { background-color: #e74c3c !important; }
+.verde { background-color: #27ae60 !important; }
+.azul { background-color: #2980b9 !important; }
+
+/* Colores para triángulo */
+.triangulo.rojo { border-bottom-color: #e74c3c; }
+.triangulo.verde { border-bottom-color: #27ae60; }
+.triangulo.azul { border-bottom-color: #2980b9; }
+
+/* Botones */
+.controles {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 15px 25px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: #555;
+}
