@@ -30,10 +30,12 @@ h1 {
 /* Formas */
 .circulo {
     border-radius: 50%;
+    background-color: red
 }
 
 .cuadrado {
     border-radius: 0%;
+    background-color : red
 }
 
 .triangulo {
@@ -52,7 +54,7 @@ h1 {
 
 /* Colores para triángulo */
 .triangulo.rojo { border-bottom-color: #e74c3c; }
-.triangulo.verde { border-bottom-color: #27ae60; }
+.triangulo.verde { border-bottom-color: #42c77a; }
 .triangulo.azul { border-bottom-color: #2980b9; }
 
 /* Botones */

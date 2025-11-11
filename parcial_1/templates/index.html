@@ -2,17 +2,26 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista Circular de Figuras</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styless.css') }}">
 </head>
-<body>
+<body style="background-color: {{ figura.color }};">
     <div class="container">
         <h1>Lista Circular de Figuras</h1>
 
-        <!-- Contenedor de figura -->
-        <div class="figura {{ figura }} {{ color }}">{{ figura }}</div>
+        <div class="figura-container">
+            {% if figura == "Círculo" %}
+                <div class="circulo"></div>
+            {% elif figura == "Triángulo" %}
+                <div class="triangulo"></div>
+            {% elif figura == "Cuadrado" %}
+                <div class="cuadrado"></div>
+            {% endif %}
+            <p class="nombre">{{ figura }}</p>
+        </div>
 
-        <div class="controles">
+        <div class="botones">
             <a href="/retroceder" class="btn">⬅️</a>
             <a href="/avanzar" class="btn">➡️</a>
         </div>

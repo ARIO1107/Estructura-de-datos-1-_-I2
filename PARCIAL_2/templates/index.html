@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Infija → Prefija 🎄</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>🧮 Calculadora Infija → Prefija</h1>
+    <p>Ingresa la operación en forma infija, separando los elementos por espacios.</p>
+
+    <form method="POST">
+        <label>Expresión Infija:</label>
+        <input type="text" name="entrada" placeholder="Ej: 3 + 4 * 2" required
+               value="{{ entrada }}">
+        <button type="submit">Calcular</button>
+    </form>
+
+    {% if expresion %}
+    <div class="resultado">
+        <p><b>Pila de Números:</b> {{ numeros }}</p>
+        <p><b>Pila de Operadores:</b> {{ operadores }}</p>
+        <p><b>Expresión Infija reconstruida:</b> {{ expresion }}</p>
+        <p><b>Prefija:</b> {{ prefija }}</p>
+        <p><b>Resultado:</b> {{ resultado }}</p>
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>
